@@ -28,11 +28,20 @@ for (let i = 0; i <= 101; i++) {
   if (isPrime(i) === true) {
     // Pass i into isPrime func, check for truthy return
     element.style.backgroundColor = "red";
+    element.addEventListener("click", (event) => {
+      console.log("You clicked a Prime Number!", event);
+    });
   } else if (i % 2 === 0) {
     element.style.backgroundColor = "green";
+    element.addEventListener("click", (event) => {
+      console.log("You clicked a Even Number!", event);
+    });
   } else {
     if (i % 2 === 1) {
       element.style.backgroundColor = "yellow";
+      element.addEventListener("click", (event) => {
+        console.log("You clicked a Odd Number!", event);
+      });
     }
   }
   document.getElementById("section").appendChild(element);
